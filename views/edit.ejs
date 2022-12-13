@@ -1,0 +1,22 @@
+<div class="data-form" style="margin-left:10%;padding:1px 16px;height:1000px;">
+    <form action="/edit/save" method="POST">
+        <h2>Edit a Record</h2>
+        <% books.forEach(s=> { %>
+        <label>ID</label>
+        <input type="text" name="ID" value="<%= s._id %>" readonly required><br><br>
+        
+        <label>Name</label>
+        <input type="text" name="Name" placeholder="<%= s.name %>" required><br><br>
+
+        <label>Author</label>
+        <input type="text" name="Author" placeholder="<%= s.AuthorName %>" required><br><br>
+
+        <label>Description:</label><br>
+        <label] type="text" name="Description" readonly required><%= s.Description %></label><br><br>
+
+        <img src="<%= s.BookIMG %>" name="Image" width="200px" height="250px"><br>
+
+        <button type="submit">Save Changes</button>
+        <% }); %>
+    </form>
+</div>

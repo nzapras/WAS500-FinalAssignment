@@ -1,0 +1,27 @@
+
+<% bookformat.forEach(s=> 
+{ %><div style="margin-left:10%;padding:1px 16px;height:1000px;">
+  <h2>Books</h2>
+  
+  <p>
+    <figure>
+      
+      <img align="left" src="<%= s.BookIMG %>" width="468" height="690">
+      
+    
+      <figcaption>
+        <h3>
+          <br><br><br><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<%= s.name %>
+          
+        </h3>
+    
+          </figcaption>
+        </figure>
+        &nbsp;&nbsp;&nbsp;&nbsp;     <b><u>Authour</u>:</b> <%= s.AuthorName %><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;     <b><u>Description</u>:</b> <%= s.Description %><br>
+  </p>
+  
+
+  <% });  
+  %>

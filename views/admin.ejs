@@ -1,0 +1,38 @@
+<div style="margin-left:10%;padding:1px 16px;height:1000px;">
+<h2>Books Table</h2><br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>  
+      <th>Name</th>
+      <th>Author</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% books.forEach(s=> { %>
+      <tr>
+        <td style="padding: 15px;">
+            <%= s._id %>
+          </a>
+        </td>
+        <td style="padding: 15px;">
+          <%= s.name %>
+        </td>
+        <td style="padding: 15px;">
+          <%= s.AuthorName %>
+        </td>
+        <td style="padding: 15px;">
+          <a href="<%= `edit/${s._id}` %>"
+            onclick="return confirm('Are you sure you want to edit this record?')">Edit</a>
+        </td>
+        <td style="padding: 15px;">
+          <a href="delete/<%= `${s._id}` %>"
+            onclick="return confirm('Are you sure you want to delete this record?')">Delete</a>
+        </td>
+      </tr>
+      <% }); %>
+  </tbody>
+</table>
+</div>
